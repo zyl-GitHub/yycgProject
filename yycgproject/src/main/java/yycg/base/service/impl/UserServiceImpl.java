@@ -1,20 +1,23 @@
 package yycg.base.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
 
-import yycg.base.dao.mapper.SysuserMapper;
-import yycg.base.pojo.po.Sysuser;
+import org.springframework.beans.factory.annotation.Autowired;
+import yycg.base.dao.mapper.SysuserMapperCustom;
+import yycg.base.pojo.vo.SysuserCustom;
+import yycg.base.pojo.vo.SysuserQueryVo;
 import yycg.base.service.UserService;
 
 public class UserServiceImpl implements UserService
 {
 	@Autowired
-	private SysuserMapper sysuserMapper;
+	private SysuserMapperCustom sysuserMapperCustom;
+
 	@Override
-	public Sysuser findSysuserById(String id)
+	public List<SysuserCustom> findSysuserList(SysuserQueryVo sysuserQueryVo)
 	{
-		// TODO 自动生成的方法存根
-		return sysuserMapper.selectByPrimaryKey(id);
+		return sysuserMapperCustom.findSysuserList(sysuserQueryVo);
 	}
+
 
 }

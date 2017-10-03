@@ -1,13 +1,11 @@
-package yycg.base.service;
+package yycg.base.dao.mapper;
 
 import java.util.List;
 
-import yycg.base.pojo.po.Sysuser;
 import yycg.base.pojo.vo.SysuserCustom;
 import yycg.base.pojo.vo.SysuserQueryVo;
 
-public interface UserService
+public interface SysuserMapperCustom
 {
-	//根据条件查询用户信息
 	public List<SysuserCustom> findSysuserList(SysuserQueryVo sysuserQueryVo);
 }

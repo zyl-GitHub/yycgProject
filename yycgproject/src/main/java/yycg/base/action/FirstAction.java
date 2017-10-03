@@ -11,13 +11,11 @@ import yycg.base.service.UserService;
 @Controller
 public class FirstAction
 {
-	@Autowired
-	private UserService userService;
+	
 	@RequestMapping("/first")
-	public String first(Model model)
+	public String first()
 	{
-		Sysuser sysuser = userService.findSysuserById("286");
-		model.addAttribute("sysuser", sysuser);
+		System.out.println(12312);
 		return "/base/first";
 	}
 	@RequestMapping("/welcome")
