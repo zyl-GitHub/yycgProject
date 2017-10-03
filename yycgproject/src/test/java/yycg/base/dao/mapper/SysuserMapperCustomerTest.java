@@ -25,7 +25,7 @@ public class SysuserMapperCustomerTest extends TestCase
 		// TODO 自动生成的方法存根
 		super.tearDown();
 	}
-	public void testFindSysuserById()
+	public void testFindSysuserById() throws Exception
 	{
 		SysuserCustomMapper sysuserCustomMapper = (SysuserCustomMapper) applicationContext
 				.getBean("sysuserCustomMapper");
